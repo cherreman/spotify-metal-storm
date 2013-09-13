@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The name of the app</title>
+    <!-- Include the stylesheets you need for the Views components -->
+    <!-- See https://developer.spotify.com/technologies/apps/docs/preview/views/ -->
+    <link rel="stylesheet" href="$views/css/image.css">
+    <link rel="stylesheet" href="$views/css/list.css">
+    <link rel="stylesheet" href="$views/css/buttons.css">
+    <!-- <link rel="stylesheet" href="$views/css/throbber.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- If you are using the preview SDK for webplayer then uncomment the script below -->
+    <!--script src="http://d1hza3lyffsoht.cloudfront.net/preview-sdk/bootstrap.js"></script-->
+</head>
+<body style="position: relative;padding: 0;margin: 0;">
+<div style="height:50px;text-align:center; background:#171722;color:#FFFFFF;">
+    <img src="images/ms-logo.png" style="margin-top:11px">
+</div>
+
+<table class="bordercolor" cellspacing="1" style="width:940px;margin-left:auto;margin-right:auto;display:block">
+    <tbody>
+    <tr>
+        <td class="windowbg" style="padding-left:10px">
+            <h1 id="heading"></h1>
+        </td>
+        <td class="windowbg2" style="padding-right:10px;text-align:right;width:590px">
+            Year:
+
+            <select id="yearSelect" name="album_year"
+                    onchange="window.location='spotify:app:metal-storm:year:'+this.value;decadeSelect.value='';styleSelect.value=''">
+                <option value="">all time</option>
+                <option value="2013" selected>2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+            </select>
+
+            <span style="padding-left:10px">Decade:</span>
+
+            <select id="decadeSelect" name="album_decade"
+                    onchange="window.location='spotify:app:metal-storm:decade:'+this.value;yearSelect.value='';styleSelect.value=''">
+                <option value="">all time</option>
+                <option value="200">2000's</option>
+                <option value="199">1990's</option>
+                <option value="198">1980's</option>
+            </select>
+
+            <span style="padding-left:10px">Style:</span>
+
+            <select id="styleSelect" name="album_style"
+                    onchange="window.location='spotify:app:metal-storm:style:'+this.value;yearSelect.value='';decadeSelect.value=''">
+                <option value="">all styles</option>
+                <option value="Alternative">Alternative metal</option>
+                <option value="Avantgarde">Avantgarde metal</option>
+                <option value="Black">Black metal</option>
+                <option value="Death">Death metal</option>
+                <option value="Deathcore">Deathcore</option>
+                <option value="Doom">Doom metal</option>
+                <option value="Folk">Folk metal</option>
+                <option value="Gothic">Gothic metal</option>
+                <option value="Gothenburg">Gothenburg metal</option>
+                <option value="Glam">Glam metal</option>
+                <option value="Grindcore">Grindcore</option>
+                <option value="Hard rock">Hard rock</option>
+                <option value="Heavy">Heavy metal</option>
+                <option value="Industrial">Industrial metal</option>
+                <option value="Math">Math metal</option>
+                <option value="Metalcore">Metalcore</option>
+                <option value="Nu">Nu metal</option>
+                <option value="Post-metal">Post-metal</option>
+                <option value="Power">Power metal</option>
+                <option value="Progressive">Progressive metal</option>
+                <option value="Rock">Rock</option>
+                <option value="Sludge">Sludge metal</option>
+                <option value="Speed">Speed metal</option>
+                <option value="Stoner">Stoner metal</option>
+                <option value="Suomi">Suomi metal</option>
+                <option value="Symphonic">Symphonic metal</option>
+                <option value="Thrash">Thrash metal</option>
+            </select>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div style="padding:10px;width:940px;margin-left:auto;margin-right:auto;display:block">
+    <div id="albumCoverContainer"></div>
+</div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

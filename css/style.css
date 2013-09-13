@@ -1,0 +1,8 @@
+html {
+  overflow: auto;
+}
+
+.sp-tabbar {
+    background-color: #141836;
+    text-align: center;
+}
